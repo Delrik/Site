@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Site.Controllers
 {
-    public class HomeController : Controller
+    public class FirstProjectController : Controller
     {
         public IActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-            ViewBag.first = "active";
+            ViewBag.Title = "First project";
+            ViewBag.second = "active";
             return View();
         }
     }
