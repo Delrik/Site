@@ -12,9 +12,6 @@ namespace Site.Data.Models
         public string LastName { get; set; }
         public string Summary { get; set; }
         public string Objectives { get; set; }
-        public List<Skill> Skills { get; set; }
-        public List<Experience> Experiences { get; set; }
-        public List<Education> Educations { get; set; }
-        public List<Contact> Contacts { get; set; }
+        public string Jpg { get; set; }
     }
 }

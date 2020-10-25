@@ -8,6 +8,11 @@ namespace Site.Controllers
 {
     public class FirstProjectController : Controller
     {
+
+        FirstProjectController()
+        {
+
+        }
         public IActionResult Index()
         {
             ViewBag.Title = "First project";

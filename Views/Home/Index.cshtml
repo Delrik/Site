@@ -1,5 +1,5 @@
-﻿@using Site.Data.Models
-@model CV
+﻿@using Site.Data.ViewModels
+@model CVView
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -8,11 +8,11 @@
 <div class="container col-12 bg-secondary mb-5">
     <div class="row text-white">
         <div class="col-4 pl-0">
-            <img class="img-fluid ml-0" src="/img/photo.jpg" />
+            <img class="img-fluid ml-0" src="@Model.cv.Jpg" />
         </div>
         <div class="col-4">
-            <h3>@Model.FirstName @Model.LastName. About me</h3>
-            <p>@Model.Summary</p>
+            <h3>@Model.cv.FirstName @Model.cv.LastName. About me</h3>
+            <p>@Model.cv.Summary</p>
             <h3>Education</h3>
             <ul class="pl-4">
                 @{
@@ -43,10 +43,10 @@
                             @el.Name @if(el.Level!=null)@("("+el.Level+")")@("\\n")
                         }
                     }')"><h4>Skills</h4></button>
-        </div>
+        </div> 
         <div class="col-4">
             <h3>Summary & Objectives</h3>
-            <p>@Model.Objectives</p>
+            <p>@Model.cv.Objectives</p>
             <h3>Experience</h3>
             <ul class="pl-4">
                 @{
